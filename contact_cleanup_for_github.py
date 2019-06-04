@@ -1,5 +1,6 @@
 #deduping project, found around 1k duplicates out of 49k contacts (actually 933 out of 49,607)
 #to make this run for yourself, input your credentials to create a connection to the salesforce api and manipulate the long string of contacts fields to fit your situation
+#outputs are two csv files: contacts_with_scores.csv has all contact objects with individual duplicate scores and exact_contact_duplicates.csv, which has columns for the parent contact id, the older duplicates, the parent account id, and whether or not there are more than 3 duplicates
 
 from simple_salesforce import Salesforce
 from pandas import ExcelWriter
